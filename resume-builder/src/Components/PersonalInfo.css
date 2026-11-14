@@ -1,0 +1,94 @@
+
+.personal-info {
+  background: #ffffff;
+  padding: 28px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+}
+
+.personal-info-heading {
+  margin-bottom: 28px;
+}
+
+.personal-info-heading h2 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.personal-info-heading p {
+  font-size: 13px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.personal-info form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #dbe2ea;
+  border-radius: 9px;
+  outline: none;
+  background: #f8fafc;
+  color: #1e293b;
+  font-size: 13px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: #ffffff;
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.form-group:last-child {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+  .personal-info {
+    padding: 20px;
+  }
+
+  .personal-info form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group:last-child {
+    grid-column: auto;
+  }
+}

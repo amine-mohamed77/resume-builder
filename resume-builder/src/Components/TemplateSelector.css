@@ -1,0 +1,104 @@
+
+.template-selector {
+  margin-bottom: 25px;
+}
+
+.template-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.template-card {
+  position: relative;
+  padding: 12px;
+  text-align: left;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.template-card:hover {
+  border-color: #94a3b8;
+  transform: translateY(-2px);
+}
+
+.template-card.active {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.template-thumbnail {
+  height: 145px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.thumbnail-header {
+  width: 65%;
+  height: 12px;
+  margin-bottom: 12px;
+  background: #334155;
+  border-radius: 3px;
+}
+
+.thumbnail-line {
+  width: 90%;
+  height: 5px;
+  margin-bottom: 7px;
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.thumbnail-line.short {
+  width: 55%;
+}
+
+.thumbnail-section {
+  width: 40%;
+  height: 7px;
+  margin: 15px 0 10px;
+  background: #64748b;
+  border-radius: 3px;
+}
+
+.template-thumbnail.professional .thumbnail-header {
+  background: #1d4ed8;
+}
+
+.template-thumbnail.ats .thumbnail-header {
+  background: #111827;
+}
+
+.template-thumbnail.creative .thumbnail-header {
+  background: #7c3aed;
+}
+
+.template-info h3 {
+  margin: 10px 0 4px;
+  font-size: 15px;
+}
+
+.template-info p {
+  margin: 0;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.template-selected {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 500px) {
+  .template-grid {
+    grid-template-columns: 1fr;
+  }
+}

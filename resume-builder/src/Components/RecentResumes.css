@@ -1,0 +1,68 @@
+.recent-resumes {
+  margin-top: 35px;
+  background: #ffffff;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+
+.recent-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.recent-heading h2 {
+  font-size: 20px;
+  color: #1e293b;
+}
+
+.recent-heading button {
+  background: #7c3aed;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.resume-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.resume-item:last-child {
+  border-bottom: none;
+}
+
+.resume-item h3 {
+  font-size: 15px;
+  color: #1e293b;
+  margin-bottom: 7px;
+}
+
+.resume-item p {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.resume-item span {
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.resume-item .completed {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.resume-item .draft {
+  background: #fef3c7;
+  color: #b45309;
+}

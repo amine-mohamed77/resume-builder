@@ -1,0 +1,63 @@
+.education-section {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.education-card {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.education-card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.education-card-heading h3 {
+  margin: 0;
+  color: #1e293b;
+}
+
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.education-grid .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.education-grid label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.education-grid input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+}
+
+.education-grid input:focus {
+  border-color: #7c3aed;
+}
+
+@media (max-width: 600px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}

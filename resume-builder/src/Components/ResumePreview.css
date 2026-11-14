@@ -1,0 +1,489 @@
+
+/* Main Preview */
+.resume-preview {
+  background: #e9edf5;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  min-width: 0;
+}
+
+.resume-paper {
+  background: #ffffff;
+  width: 100%;
+  max-width: 650px;
+  min-height: 750px;
+  margin: 0 auto;
+  padding: 45px 38px;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+  color: #1e293b;
+  overflow-wrap: anywhere;
+}
+
+.resume-header {
+  margin-bottom: 22px;
+}
+
+.resume-heading h1 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.resume-heading h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.resume-paper h2 {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+}
+
+.resume-paper hr {
+  border: none;
+  margin: 25px 0;
+}
+
+.preview-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.preview-contact p {
+  font-size: 11px;
+}
+
+.resume-paper > p {
+  font-size: 12px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.preview-experience,
+.preview-education {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  padding-bottom: 15px;
+}
+
+.preview-experience h3,
+.preview-education h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.preview-experience p,
+.preview-education p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 4px 0;
+}
+
+.preview-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.preview-skill {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* MODERN TEMPLATE */
+.template-modern {
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.modern-layout {
+  display: grid;
+grid-template-columns: 40% 60%;  min-height: 750px;
+  background: linear-gradient(
+    to right,
+    #1e3a8a 34%,
+    #ffffff 34%
+  );
+  align-items: stretch;
+}
+
+.modern-sidebar {
+  color: #ffffff;
+  padding: 35px 20px;
+  min-width: 0;
+}
+
+.modern-sidebar h2 {
+  color: #ffffff;
+  font-size: 15px;
+  border-bottom: 2px solid #60a5fa;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.modern-contact {
+  margin-bottom: 35px;
+}
+
+.modern-contact p {
+  font-size: 11px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  overflow-wrap: anywhere;
+  color: #dbeafe;
+}
+
+.modern-skills ul {
+  padding-left: 18px;
+}
+
+.modern-skills li {
+  font-size: 12px;
+  margin-bottom: 12px;
+  color: #dbeafe;
+  overflow-wrap: anywhere;
+}
+
+.modern-main {
+  padding: 40px 25px;
+  min-width: 0;
+  background: transparent;
+}
+
+.modern-header {
+  padding-bottom: 25px;
+  border-bottom: 2px solid #dbeafe;
+  margin-bottom: 25px;
+}
+
+.modern-header h1 {
+  color: #1e3a8a;
+  font-size: 28px;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.modern-header h3 {
+  color: #64748b;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.modern-section {
+  margin-bottom: 28px;
+}
+
+.modern-section h2 {
+  color: #2563eb;
+  font-size: 15px;
+  border-bottom: 1px solid #dbeafe;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+.modern-section p {
+  color: #475569;
+  font-size: 11px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.modern-item {
+  margin-bottom: 20px;
+}
+
+.modern-item h3 {
+  color: #1e293b;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.modern-item .modern-company {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.modern-item .modern-date {
+  color: #94a3b8;
+  font-size: 10px;
+  margin-bottom: 7px;
+}
+
+/* PROFESSIONAL TEMPLATE */
+.template-professional {
+  font-family: Georgia, serif;
+  color: #1e293b;
+}
+
+.template-professional .resume-header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 3px double #1e3a8a;
+}
+
+.template-professional .resume-heading h1 {
+  color: #1e3a8a;
+  font-size: 30px;
+}
+
+.template-professional .resume-heading h3 {
+  color: #475569;
+  font-style: italic;
+}
+
+.template-professional .preview-contact {
+  justify-content: center;
+  color: #475569;
+}
+
+.template-professional h2 {
+  color: #1e3a8a;
+  letter-spacing: 1.2px;
+  border-bottom: 1px solid #94a3b8;
+  padding-bottom: 7px;
+}
+
+.template-professional hr {
+  border-top: 1px solid #cbd5e1;
+}
+
+.template-professional .preview-experience,
+.template-professional .preview-education {
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.template-professional .preview-skill {
+  background: #f1f5f9;
+  color: #1e3a8a;
+  border: 1px solid #cbd5e1;
+}
+
+/* ATS FRIENDLY TEMPLATE */
+.template-ats {
+  font-family: Arial, sans-serif;
+  color: #111827;
+  box-shadow: none;
+}
+
+.template-ats .resume-header {
+  border-bottom: 1px solid #111827;
+  padding-bottom: 14px;
+}
+
+.template-ats .resume-heading h1 {
+  font-size: 25px;
+  color: #111827;
+}
+
+.template-ats .resume-heading h3 {
+  color: #111827;
+  font-size: 15px;
+}
+
+.template-ats .preview-contact {
+  display: block;
+  color: #111827;
+}
+
+.template-ats .preview-contact p {
+  display: inline;
+  margin-right: 12px;
+  font-size: 11px;
+}
+
+.template-ats h2 {
+  color: #111827;
+  font-size: 16px;
+  border-bottom: 1px solid #111827;
+  padding-bottom: 5px;
+}
+
+.template-ats hr {
+  border-top: 1px solid #9ca3af;
+}
+
+.template-ats .preview-experience,
+.template-ats .preview-education {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.template-ats .preview-skill {
+  padding: 0;
+  margin-right: 12px;
+  color: #111827;
+  background: transparent;
+}
+
+/* CREATIVE TEMPLATE */
+.template-creative {
+  font-family: Arial, sans-serif;
+  color: #334155;
+  border-top: 9px solid #7c3aed;
+}
+
+.template-creative .resume-header {
+  background: #f5f3ff;
+  padding: 22px;
+  border-radius: 10px;
+}
+
+.template-creative .resume-heading h1 {
+  color: #7c3aed;
+  font-size: 32px;
+}
+
+.template-creative .resume-heading h3 {
+  color: #6d28d9;
+}
+
+.template-creative .preview-contact {
+  color: #6b7280;
+}
+
+.template-creative h2 {
+  color: #7c3aed;
+  border-left: 4px solid #7c3aed;
+  padding-left: 10px;
+}
+
+.template-creative hr {
+  border-top: 1px dashed #c4b5fd;
+}
+
+.template-creative .preview-experience,
+.template-creative .preview-education {
+  border-left: 2px solid #c4b5fd;
+  padding-left: 14px;
+}
+
+.template-creative .preview-skill {
+  background: #ede9fe;
+  color: #6d28d9;
+  border-radius: 20px;
+  padding: 6px 12px;
+}
+
+/* Download Button */
+.download-pdf-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 13px 22px;
+  background: #7c3aed;
+  color: #ffffff;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.download-pdf-btn:hover {
+  background: #6d28d9;
+}
+
+.download-pdf-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .resume-preview {
+    padding: 12px;
+  }
+
+  .resume-paper {
+    padding: 28px 20px;
+    min-height: 600px;
+  }
+
+  .resume-heading h1 {
+    font-size: 24px;
+  }
+
+  .modern-layout {
+    grid-template-columns: 1fr;
+    background: #ffffff;
+  }
+
+  .modern-sidebar {
+    background: #1e3a8a;
+    padding: 25px;
+  }
+
+  .modern-main {
+    padding: 25px;
+  }
+}
+
+
+/* Fix Modern PDF Sidebar Height */
+.template-modern .modern-layout {
+  display: grid !important;
+  grid-template-columns: 34% 66% !important;
+  min-height: 750px !important;
+  align-items: stretch !important;
+  background: #ffffff !important;
+}
+
+.template-modern .modern-sidebar {
+  background-color: #1e3a8a !important;
+  min-height: 750px !important;
+  height: 100% !important;
+  align-self: stretch !important;
+  box-sizing: border-box;
+}
+
+.template-modern .modern-main {
+  background-color: #ffffff !important;
+  min-height: 750px !important;
+  box-sizing: border-box;
+}
+
+
+/* Modern A4 Full Page Layout Fix */
+
+.template-modern {
+  padding: 0 !important;
+  min-height: 297mm !important;
+  height: auto !important;
+  box-sizing: border-box;
+}
+
+.template-modern .modern-layout {
+  display: grid !important;
+  grid-template-columns: 34% 66% !important;
+  grid-auto-rows: 1fr;
+  min-height: 297mm !important;
+  height: auto !important;
+  align-items: stretch !important;
+  background: #ffffff !important;
+  box-sizing: border-box;
+}
+
+.template-modern .modern-sidebar {
+  background: #1e3a8a !important;
+  min-height: 297mm !important;
+  height: 100% !important;
+  align-self: stretch !important;
+  box-sizing: border-box;
+}
+
+.template-modern .modern-main {
+  background: #ffffff !important;
+  min-height: 297mm !important;
+  height: 100%;
+  box-sizing: border-box;
+}

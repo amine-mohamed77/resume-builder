@@ -1,0 +1,41 @@
+
+.create-resume {
+  width: 100%;
+  padding: 10px 0 40px;
+}
+
+.create-resume-heading {
+  margin-bottom: 28px;
+}
+
+.create-resume-heading h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+  letter-spacing: -0.7px;
+}
+
+.create-resume-heading p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.resume-builder {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 25px;
+  align-items: start;
+}
+
+@media (max-width: 1000px) {
+  .resume-builder {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .create-resume-heading h1 {
+    font-size: 23px;
+  }
+}
