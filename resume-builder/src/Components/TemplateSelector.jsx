@@ -39,9 +39,13 @@ function TemplateSelector({ selectedTemplate, setSelectedTemplate }) {
             key={template.id}
             className={`template-card ${
               selectedTemplate === template.id ? "active" : ""
-            }`}
+            } ${template.id === "professional" ? "recommended" : ""}`}
+            aria-pressed={selectedTemplate === template.id}
             onClick={() => setSelectedTemplate(template.id)}
           >
+            {template.id === "professional" && (
+              <span className="template-badge">Recruiter favorite</span>
+            )}
             <div className={`template-thumbnail ${template.id}`}>
               <div className="thumbnail-header"></div>
               <div className="thumbnail-line"></div>

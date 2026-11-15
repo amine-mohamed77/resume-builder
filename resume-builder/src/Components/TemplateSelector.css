@@ -2,11 +2,13 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
+  align-items: stretch;
 }
 
 .template-card {
+  position: relative;
   min-width: 0;
-  padding: 8px;
+  padding: 9px;
   border: 1px solid #e2e9e5;
   border-radius: 7px;
   background: #fff;
@@ -26,9 +28,29 @@
   box-shadow: 0 0 0 2px rgb(57 117 108 / 10%);
 }
 
+.template-card:focus-visible {
+  outline: 3px solid #89c6bc;
+  outline-offset: 3px;
+}
+
+.template-badge {
+  display: inline-flex;
+  margin: 0 0 7px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: #eaf3ee;
+  color: #315b52;
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: 0.035em;
+  line-height: 1;
+}
+
 .template-thumbnail {
+  position: relative;
   height: 96px;
   padding: 11px 9px;
+  overflow: hidden;
   border: 1px solid #edf0ee;
   border-radius: 4px;
   background: #fcfdfc;
@@ -49,14 +71,25 @@
   background: #d3ddda;
 }
 
+.thumbnail-line.short {
+  width: 55%;
+}
+
 .thumbnail-section {
+  width: 40%;
   height: 5px;
   margin: 11px 0 7px;
   border-radius: 2px;
   background: #8eaaa2;
 }
 
+.template-thumbnail.professional {
+  padding-left: 30px;
+  background: linear-gradient(90deg, #304743 0 24%, #fcfdfc 24% 100%);
+}
+
 .template-thumbnail.professional .thumbnail-header {
+  width: 80%;
   background: #304743;
 }
 
@@ -69,14 +102,18 @@
 }
 
 .template-info h3 {
-  margin: 9px 0 3px;
+  margin: 9px 0 4px;
   color: #314440;
   font-size: 10px;
   font-weight: 650;
 }
 
 .template-info p {
-  display: none;
+  display: block;
+  margin: 0;
+  color: #83918d;
+  font-size: 9px;
+  line-height: 1.35;
 }
 
 .template-selected {

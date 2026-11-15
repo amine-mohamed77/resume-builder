@@ -521,15 +521,89 @@ grid-template-columns: 40% 60%;  min-height: 750px;
   border-color: #dce9e4;
 }
 
-.template-professional .resume-heading h1,
-.template-professional h2 {
-  color: #315b52;
+.template-professional {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #273834;
 }
 
 .template-professional .resume-header {
-  border-color: #66897f;
+  padding: 24px 12px 20px;
+  border-bottom: 1px solid #8ca99f;
+  text-align: center;
 }
 
+.template-professional .resume-heading h1 {
+  margin-bottom: 8px;
+  color: #244d44;
+  font-size: 29px;
+  font-weight: 600;
+  letter-spacing: 0.035em;
+}
+
+.template-professional .resume-heading h3 {
+  margin-bottom: 14px;
+  color: #61756f;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 650;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.template-professional .preview-contact {
+  justify-content: center;
+  gap: 5px 15px;
+  color: #61756f;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 10px;
+}
+
+.template-professional h2 {
+  margin-top: 22px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #d7e2dd;
+  color: #315b52;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+}
+
+.template-professional .preview-experience,
+.template-professional .preview-education {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  padding: 0 0 12px 13px;
+  border-bottom: 1px solid #edf1ef;
+  border-left: 2px solid #9bb9ae;
+}
+
+.template-professional .preview-experience h3,
+.template-professional .preview-education h3 {
+  color: #273d37;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.template-professional .preview-experience p,
+.template-professional .preview-education p,
+.template-professional > p {
+  color: #536760;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.template-professional .preview-skill {
+  border: 1px solid #d7e5de;
+  border-radius: 4px;
+  background: #f3f7f4;
+  color: #315b52;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 10px;
+}
 .template-creative {
   border-top-color: #b97760;
 }
