@@ -1,60 +1,105 @@
 .sidebar {
-  width: 250px;
-  min-height: 100vh;
-  background: #111827;
-  color: #fff;
-  padding: 30px 20px;
+  position: sticky;
+  top: 0;
   display: flex;
+  flex: 0 0 248px;
   flex-direction: column;
-  box-sizing: border-box;
+  width: 248px;
+  height: 100vh;
+  min-height: 560px;
+  padding: 30px 18px 20px;
+  background: #173b38;
+  color: #fff;
 }
 
 .sidebar-logo {
-  font-size: 25px;
-  font-weight: 700;
-  margin-bottom: 45px;
+  margin: 0 0 48px 7px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 680;
+  letter-spacing: -0.055em;
 }
 
 .sidebar-logo span {
-  color: #8b5cf6;
+  color: #9bd2c7;
 }
 
 .sidebar nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .sidebar nav a {
-  display: block;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  color: #b5c9c4;
+  font-size: 13px;
+  font-weight: 500;
   text-decoration: none;
-  color: #9ca3af;
-  padding: 13px 15px;
-  border-radius: 10px;
-  transition: 0.3s ease;
+  transition: color 150ms ease, background 150ms ease;
 }
 
 .sidebar nav a:hover,
 .sidebar nav a.active {
-  background: #292044;
-  color: #a78bfa;
+  border-color: rgb(255 255 255 / 7%);
+  background: rgb(255 255 255 / 10%);
+  color: #fff;
 }
 
 .sidebar-logout {
   margin-top: auto;
-  padding: 13px;
-  border: 1px solid #374151;
+  padding: 12px;
+  border: 1px solid rgb(255 255 255 / 14%);
+  border-radius: 7px;
   background: transparent;
-  color: #f87171;
-  border-radius: 10px;
+  color: #d3dfdc;
+  font-size: 12px;
+  text-align: left;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background 150ms ease;
 }
 
 .sidebar-logout:hover {
-  background: #7f1d1d;
-  color: white;
+  background: rgb(255 255 255 / 8%);
+}
+
+@media (max-width: 720px) {
+  .sidebar {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 16px 20px 12px;
+  }
+
+  .sidebar-logo {
+    margin: 0 0 14px;
+  }
+
+  .sidebar nav ul {
+    flex-direction: row;
+    gap: 5px;
+    overflow-x: auto;
+  }
+
+  .sidebar nav a {
+    min-height: 38px;
+    padding: 0 10px;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  .sidebar-logout {
+    display: none;
+  }
 }

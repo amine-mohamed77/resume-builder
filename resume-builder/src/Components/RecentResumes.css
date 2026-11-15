@@ -1,68 +1,92 @@
 .recent-resumes {
-  margin-top: 35px;
-  background: #ffffff;
-  padding: 25px;
-  border: 1px solid #e2e8f0;
-  border-radius: 14px;
+  margin-top: 28px;
+  padding: 23px 24px 8px;
+  border: 1px solid #e4eae7;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(28 45 41 / 3%);
 }
 
 .recent-heading {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
 }
 
 .recent-heading h2 {
-  font-size: 20px;
-  color: #1e293b;
+  margin: 0;
+  color: #203431;
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
 }
 
 .recent-heading button {
-  background: #7c3aed;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
+  padding: 7px 0 7px 10px;
+  border: 0;
+  background: transparent;
+  color: #39756c;
+  font-size: 12px;
+  font-weight: 650;
   cursor: pointer;
 }
 
 .resume-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 18px 0;
-  border-bottom: 1px solid #e2e8f0;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 75px;
+  padding: 14px 0;
+  border-bottom: 1px solid #edf0ee;
 }
 
 .resume-item:last-child {
-  border-bottom: none;
+  border-bottom: 0;
 }
 
 .resume-item h3 {
-  font-size: 15px;
-  color: #1e293b;
-  margin-bottom: 7px;
-}
-
-.resume-item p {
+  margin: 0 0 6px;
+  color: #2d423e;
   font-size: 13px;
-  color: #64748b;
-}
-
-.resume-item span {
-  padding: 7px 12px;
-  border-radius: 20px;
-  font-size: 12px;
   font-weight: 600;
 }
 
+.resume-item p {
+  margin: 0;
+  color: #899794;
+  font-size: 11px;
+}
+
+.resume-item span {
+  flex: 0 0 auto;
+  padding: 6px 9px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 650;
+}
+
 .resume-item .completed {
-  background: #dcfce7;
-  color: #15803d;
+  border-color: #d7e9e0;
+  background: #edf6f1;
+  color: #3d765f;
 }
 
 .resume-item .draft {
-  background: #fef3c7;
-  color: #b45309;
+  border-color: #f0e6cb;
+  background: #fbf6e9;
+  color: #927236;
+}
+
+@media (max-width: 480px) {
+  .recent-resumes {
+    padding: 18px 16px 6px;
+  }
+
+  .resume-item {
+    align-items: flex-start;
+  }
 }
