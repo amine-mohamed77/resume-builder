@@ -487,3 +487,150 @@ grid-template-columns: 40% 60%;  min-height: 750px;
   height: 100%;
   box-sizing: border-box;
 }
+
+.resume-paper {
+  min-height: 720px;
+  border-radius: 2px;
+  box-shadow: 0 10px 32px rgb(25 44 40 / 13%);
+  color: #243633;
+}
+
+.resume-paper h2 {
+  letter-spacing: 0.07em;
+}
+
+.template-modern .modern-layout {
+  background: #fff !important;
+}
+
+.template-modern .modern-sidebar {
+  background: #173b38 !important;
+}
+
+.template-modern .modern-sidebar h2 {
+  border-color: #9bd2c7;
+}
+
+.template-modern .modern-header h1,
+.template-modern .modern-section h2,
+.template-modern .modern-item .modern-company {
+  color: #275f55;
+}
+
+.template-modern .modern-header {
+  border-color: #dce9e4;
+}
+
+.template-professional .resume-heading h1,
+.template-professional h2 {
+  color: #315b52;
+}
+
+.template-professional .resume-header {
+  border-color: #66897f;
+}
+
+.template-creative {
+  border-top-color: #b97760;
+}
+
+.template-creative .resume-heading h1,
+.template-creative h2 {
+  color: #a45f48;
+}
+
+.template-creative .resume-header {
+  background: #fbf4ef;
+}
+
+.download-pdf-btn {
+  min-height: 43px;
+  padding: 0 18px;
+  border: 1px solid #184d47;
+  border-radius: 7px;
+  background: #184d47;
+  font-size: 12px;
+  font-weight: 650;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.download-pdf-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #123e39;
+}
+
+.download-pdf-btn:disabled {
+  background: #8ba29d;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.pdf-export-error {
+  margin: 10px 0 0;
+  color: #a14d41;
+  font-size: 12px;
+  text-align: center;
+}
+
+.pdf-export-stage {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: -10000px;
+  width: 186mm;
+  overflow: visible;
+  background: #fff;
+}
+
+.resume-paper.pdf-export {
+  width: 100% !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.pdf-export.template-modern {
+  padding: 0 !important;
+}
+
+.pdf-export.template-modern .modern-layout,
+.pdf-export.template-modern .modern-sidebar,
+.pdf-export.template-modern .modern-main {
+  min-height: 0 !important;
+  height: auto !important;
+}
+
+.pdf-export .modern-layout {
+  break-inside: auto;
+}
+
+.pdf-export .modern-item,
+.pdf-export .preview-experience,
+.pdf-export .preview-education {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+@media (max-width: 600px) {
+  .resume-paper {
+    min-height: 580px;
+  }
+
+  .template-modern .modern-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .template-modern .modern-sidebar {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .template-modern .modern-main {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+}

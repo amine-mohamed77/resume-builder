@@ -1,7 +1,7 @@
 
 import "./ResumePreview.css";
 import html2pdf from "html2pdf.js";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 function ResumePreview({
   formData,
@@ -12,6 +12,8 @@ function ResumePreview({
   selectedTemplate,
 }) {
   const resumeRef = useRef(null);
+  const [isExporting, setIsExporting] = useState(false);
+  const [exportError, setExportError] = useState("");
 
   const formatDate = (date) => {
     if (!date) return "";
@@ -26,35 +28,55 @@ function ResumePreview({
     return `${formattedMonth} ${year}`;
   };
 
-  const downloadPDF = () => {
-    if (!canDownload) return;
+  const downloadPDF = async () => {
+    if (!canDownload || isExporting || !resumeRef.current) return;
 
-    const element = resumeRef.current;
+    setIsExporting(true);
+    setExportError("");
 
     const safeName = formData.fullName
       .trim()
       .replace(/[<>:"/\\|?*]/g, "")
       .replace(/\s+/g, "-");
+    const exportStage = document.createElement("div");
+    const exportElement = resumeRef.current.cloneNode(true);
+
+    exportStage.className = "pdf-export-stage";
+    exportElement.classList.add("pdf-export");
+    exportStage.appendChild(exportElement);
+    document.body.appendChild(exportStage);
 
     const options = {
-      margin: 0,
+      margin: [12, 12, 12, 12],
       filename: `${safeName || "My-Resume"}.pdf`,
-      image: {
-        type: "jpeg",
-        quality: 0.98,
-      },
+      image: { type: "jpeg", quality: 0.98 },
       html2canvas: {
         scale: 2,
         useCORS: true,
+        scrollX: 0,
+        scrollY: 0,
+        backgroundColor: "#ffffff",
+      },
+      pagebreak: {
+        mode: ["css", "legacy"],
+        avoid: [".modern-item", ".preview-experience", ".preview-education"],
       },
       jsPDF: {
         unit: "mm",
         format: "a4",
         orientation: "portrait",
+        compress: true,
       },
     };
 
-    html2pdf().set(options).from(element).save();
+    try {
+      await html2pdf().set(options).from(exportElement).save();
+    } catch {
+      setExportError("The PDF could not be created. Please try again.");
+    } finally {
+      exportStage.remove();
+      setIsExporting(false);
+    }
   };
 
   // Modern Template
@@ -275,12 +297,16 @@ function ResumePreview({
         type="button"
         className="download-pdf-btn"
         onClick={downloadPDF}
-        disabled={!canDownload}
+        disabled={!canDownload || isExporting}
+        aria-live="polite"
       >
-        {canDownload
-          ? "Download Resume PDF"
-          : "Complete Required Fields"}
+        {isExporting
+          ? "Preparing your PDF…"
+          : canDownload
+            ? "Download resume PDF"
+            : "Complete required fields"}
       </button>
+      {exportError && <p className="pdf-export-error" role="alert">{exportError}</p>}
     </section>
   );
 }

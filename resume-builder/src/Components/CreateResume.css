@@ -1,41 +1,224 @@
-
 .create-resume {
   width: 100%;
-  padding: 10px 0 40px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 4px 0 48px;
 }
 
 .create-resume-heading {
-  margin-bottom: 28px;
+  margin-bottom: 26px;
+}
+
+.create-resume-heading::before {
+  display: block;
+  margin-bottom: 10px;
+  color: #65817d;
+  content: "RESUME WORKSPACE";
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.15em;
 }
 
 .create-resume-heading h1 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #1e293b;
-  margin-bottom: 8px;
-  letter-spacing: -0.7px;
+  margin: 0 0 7px;
+  color: #172b2a;
+  font-size: clamp(28px, 3vw, 35px);
+  font-weight: 680;
+  letter-spacing: -0.045em;
 }
 
 .create-resume-heading p {
-  color: #64748b;
-  font-size: 14px;
+  margin: 0;
+  color: #70817f;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .resume-builder {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 25px;
+  grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+  grid-template-rows: auto auto;
+  gap: 16px 20px;
   align-items: start;
 }
 
-@media (max-width: 1000px) {
+.resume-editor {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  gap: 16px;
+}
+
+.resume-editor > section {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #e4eae7;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(28 45 41 / 3%);
+}
+
+.section-heading,
+.personal-info-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2,
+.personal-info-heading h2 {
+  margin: 0 0 6px;
+  color: #203431;
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.section-heading p,
+.personal-info-heading p {
+  margin: 0;
+  color: #81908d;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.template-selector {
+  min-width: 0;
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #e4eae7;
+  border-radius: 9px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(28 45 41 / 3%);
+}
+
+.resume-preview {
+  min-width: 0;
+  grid-column: 2;
+  grid-row: 2;
+  align-self: start;
+  padding: 18px;
+  border: 1px solid #e4eae7;
+  border-radius: 9px;
+  background: #e9eeeb;
+}
+
+.form-group label,
+.experience-grid label,
+.education-grid label {
+  color: #40534f;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.form-group input,
+.form-group textarea,
+.experience-grid input,
+.experience-grid textarea,
+.education-grid input,
+.skills-form input {
+  border: 1px solid #dce5e1;
+  border-radius: 7px;
+  background: #fbfcfb;
+  color: #203431;
+  font-size: 12px;
+  transition: border-color 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.experience-grid input:focus,
+.experience-grid textarea:focus,
+.education-grid input:focus,
+.skills-form input:focus {
+  border-color: #6b9e94;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgb(107 158 148 / 13%);
+}
+
+.add-experience-btn,
+.skills-form button {
+  border: 1px solid #184d47;
+  border-radius: 7px;
+  background: #184d47;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 650;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.add-experience-btn:hover,
+.skills-form button:hover {
+  transform: translateY(-1px);
+  background: #123e39;
+}
+
+.experience-card,
+.education-card {
+  border: 1px solid #e7ece9;
+  border-radius: 8px;
+  background: #f8faf9;
+}
+
+.remove-btn {
+  border-radius: 6px;
+  background: #f8edeb;
+  color: #a14d41;
+  font-size: 11px;
+}
+
+.remove-btn:hover {
+  background: #f2dfdc;
+}
+
+.skills-list {
+  gap: 8px;
+}
+
+.skill-item {
+  border: 1px solid #d8e8e2;
+  border-radius: 6px;
+  background: #f0f7f4;
+  color: #39756c;
+  font-size: 11px;
+}
+
+.skill-item button {
+  color: #39756c;
+}
+
+@media (max-width: 1020px) {
   .resume-builder {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .resume-editor,
+  .template-selector,
+  .resume-preview {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .resume-preview {
+    width: 100%;
   }
 }
 
 @media (max-width: 600px) {
-  .create-resume-heading h1 {
-    font-size: 23px;
+  .create-resume-heading {
+    margin-bottom: 20px;
+  }
+
+  .resume-editor > section,
+  .template-selector {
+    padding: 18px;
+  }
+
+  .resume-preview {
+    padding: 10px;
   }
 }
