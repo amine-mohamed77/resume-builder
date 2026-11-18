@@ -5,6 +5,9 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   server: {
-    allowedHosts: ['sb-574zxny6ss6m.vercel.run'],
+    allowedHosts: [
+      'sb-574zxny6ss6m.vercel.run',
+      'sb-7bukm5gu0tr2.vercel.run',
+    ],
   },
 })
