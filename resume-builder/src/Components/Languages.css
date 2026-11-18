@@ -1,0 +1,120 @@
+.languages-form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(130px, 0.7fr) auto;
+  align-items: end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.language-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 7px;
+  color: #40534f;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.language-field input,
+.language-field select {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 11px;
+  border: 1px solid #d9e2de;
+  border-radius: 6px;
+  background: #fff;
+  color: #273c38;
+  font-size: 13px;
+}
+
+.language-field input:focus,
+.language-field select:focus {
+  border-color: #5f857a;
+  outline: 3px solid rgb(95 133 122 / 16%);
+}
+
+.add-language-btn {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 6px;
+  background: #244d44;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: background 150ms ease;
+}
+
+.add-language-btn:hover {
+  background: #193c35;
+}
+
+.add-language-btn:focus-visible,
+.language-item button:focus-visible {
+  outline: 3px solid rgb(95 133 122 / 30%);
+  outline-offset: 2px;
+}
+
+.language-feedback {
+  min-height: 16px;
+  margin: 6px 0 0;
+  color: #9c3d35;
+  font-size: 11px;
+}
+
+.languages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.language-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid #e4eae7;
+  border-radius: 6px;
+  background: #fbfcfb;
+  font-size: 12px;
+}
+
+.language-item-name {
+  color: #273c38;
+  font-weight: 650;
+}
+
+.language-item-proficiency {
+  margin-left: auto;
+  color: #72827e;
+}
+
+.language-item button {
+  padding: 4px 6px;
+  border: 0;
+  background: transparent;
+  color: #8b4c45;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+@media (max-width: 560px) {
+  .languages-form {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .add-language-btn {
+    grid-column: 1 / -1;
+  }
+
+  .language-item {
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+}

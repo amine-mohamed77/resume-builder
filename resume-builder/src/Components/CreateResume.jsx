@@ -6,6 +6,7 @@ import ResumePreview from "./ResumePreview";
 import WorkExperience from "./WorkExperience";
 import Education from "./Education";
 import Skills from "./Skills";
+import Languages from "./Languages";
 import "./CreateResume.css";
 import TemplateSelector from "./TemplateSelector";
 
@@ -27,6 +28,7 @@ function CreateResume() {
   const [experiences, setExperiences] = useState([]);
   const [education, setEducation] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [languages, setLanguages] = useState([]);
   const [confirmEmail, setConfirmEmail] = useState("");
   const [selectedTemplate, setSelectedTemplate] = useState(initialTemplate);
 
@@ -80,6 +82,10 @@ const canDownload = !Object.values(validationErrors).some(Boolean);
             skills={skills}
             setSkills={setSkills}
           />
+          <Languages
+            languages={languages}
+            setLanguages={setLanguages}
+          />
         </div>
         <TemplateSelector
   selectedTemplate={selectedTemplate}
@@ -91,6 +97,7 @@ const canDownload = !Object.values(validationErrors).some(Boolean);
   experiences={experiences}
   education={education}
   skills={skills}
+  languages={languages}
   canDownload={canDownload}
   selectedTemplate={selectedTemplate}
 />

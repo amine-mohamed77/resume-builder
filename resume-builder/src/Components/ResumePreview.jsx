@@ -8,6 +8,7 @@ function ResumePreview({
   experiences,
   education,
   skills,
+  languages,
   canDownload,
   selectedTemplate,
 }) {
@@ -98,6 +99,20 @@ function ResumePreview({
             <ul>
               {skills.map((skill, index) => (
                 <li key={`${skill}-${index}`}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {languages.length > 0 && (
+          <div className="modern-languages">
+            <h2>Languages</h2>
+            <ul className="preview-languages">
+              {languages.map((language, index) => (
+                <li className="preview-language" key={`${language.name}-${index}`}>
+                  <span className="preview-language-name">{language.name}</span>
+                  <span className="preview-language-level">{language.proficiency}</span>
+                </li>
               ))}
             </ul>
           </div>
@@ -277,6 +292,21 @@ function ResumePreview({
               </span>
             ))}
           </div>
+        </>
+      )}
+
+      {languages.length > 0 && (
+        <>
+          <hr />
+          <h2>Languages</h2>
+          <ul className="preview-languages">
+            {languages.map((language, index) => (
+              <li className="preview-language" key={`${language.name}-${index}`}>
+                <span className="preview-language-name">{language.name}</span>
+                <span className="preview-language-level">{language.proficiency}</span>
+              </li>
+            ))}
+          </ul>
         </>
       )}
     </>
