@@ -1,0 +1,68 @@
+.workspace-page {
+  padding-top: 24px;
+}
+
+.workspace-page-heading {
+  margin-bottom: 24px;
+}
+
+.workspace-page-heading .eyebrow {
+  color: #53867d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.workspace-page-heading h2 {
+  margin: 9px 0 5px;
+  color: #203431;
+  font-size: clamp(24px, 3vw, 32px);
+  letter-spacing: -0.045em;
+}
+
+.workspace-page-heading p {
+  margin: 0;
+  color: #72827e;
+  font-size: 14px;
+}
+
+.workspace-page .recent-resumes {
+  margin-top: 0;
+}
+
+.templates-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.settings-notice {
+  max-width: 560px;
+  padding: 22px 24px;
+  border: 1px solid #e4eae7;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.settings-notice h3 {
+  margin: 0 0 8px;
+  color: #203431;
+  font-size: 15px;
+}
+
+.settings-notice p {
+  margin: 0;
+  color: #72827e;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .workspace-page {
+    padding-top: 18px;
+  }
+
+  .settings-notice {
+    padding: 18px;
+  }
+}

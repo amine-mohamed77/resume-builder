@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 
 function Sidebar() {
@@ -7,12 +8,28 @@ function Sidebar() {
         Resume<span>AI</span>
       </h2>
 
-      <nav>
+      <nav aria-label="Main navigation">
         <ul>
-          <li><a href="#" className="active">Dashboard</a></li>
-          <li><a href="#">My Resumes</a></li>
-          <li><a href="#">Templates</a></li>
-          <li><a href="#">Settings</a></li>
+          <li>
+            <NavLink to="/" end className={({ isActive }) => isActive ? "active" : undefined}>
+              Dashboard
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/my-resumes" className={({ isActive }) => isActive ? "active" : undefined}>
+              My Resumes
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/templates" className={({ isActive }) => isActive ? "active" : undefined}>
+              Templates
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/settings" className={({ isActive }) => isActive ? "active" : undefined}>
+              Settings
+            </NavLink>
+          </li>
         </ul>
       </nav>
 

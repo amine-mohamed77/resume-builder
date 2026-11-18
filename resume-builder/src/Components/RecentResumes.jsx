@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import "./RecentResumes.css";
 
-function RecentResumes() {
+function RecentResumes({ title = "Recent Resumes", showViewAll = true }) {
   const resumes = [
     { id: 1, name: "Frontend Developer CV", date: "Nov 05, 2026", status: "Completed" },
     { id: 2, name: "Full Stack Developer CV", date: "Nov 03, 2026", status: "Draft" },
@@ -10,8 +11,8 @@ function RecentResumes() {
   return (
     <section className="recent-resumes">
       <div className="recent-heading">
-        <h2>Recent Resumes</h2>
-        <button>View All</button>
+        <h2>{title}</h2>
+        {showViewAll && <Link to="/my-resumes">View All</Link>}
       </div>
 
       <div className="resumes-list">

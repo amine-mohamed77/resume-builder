@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import Sidebar from "./Components/Sidebar";
 import Dashboard from "./Components/Dashboard";
 import CreateResume from "./Components/CreateResume";
+import { MyResumesPage, TemplatesPage, SettingsPage } from "./Components/NavigationPages";
 
 import "./App.css";
 
@@ -19,6 +20,9 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/my-resumes" element={<MyResumesPage />} />
+            <Route path="/templates" element={<TemplatesPage />} />
+            <Route path="/settings" element={<SettingsPage />} />
             <Route path="/create-resume" element={<CreateResume />} />
           </Routes>
         </main>

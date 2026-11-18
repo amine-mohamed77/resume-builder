@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import PersonalInfo from "./PersonalInfo";
 import ResumePreview from "./ResumePreview";
 import WorkExperience from "./WorkExperience";
@@ -9,6 +10,11 @@ import "./CreateResume.css";
 import TemplateSelector from "./TemplateSelector";
 
 function CreateResume() {
+  const [searchParams] = useSearchParams();
+  const requestedTemplate = searchParams.get("template");
+  const initialTemplate = ["modern", "professional", "ats", "creative"].includes(requestedTemplate)
+    ? requestedTemplate
+    : "modern";
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -22,7 +28,7 @@ function CreateResume() {
   const [education, setEducation] = useState([]);
   const [skills, setSkills] = useState([]);
   const [confirmEmail, setConfirmEmail] = useState("");
-  const [selectedTemplate, setSelectedTemplate] = useState("modern");
+  const [selectedTemplate, setSelectedTemplate] = useState(initialTemplate);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
